@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавить поставщика</title>
+</head>
+<body>
+<h1>Добавить поставщика</h1>
+<form th:action="@{/api/suppliers}"th:object="${supplier}"  method="POST">
+    <div>
+        <label for="supName">Имя:</label>
+        <input type="text" id="supName" name="supplierName" required>
+    </div>
+    <div>
+        <label for="street">Улица:</label>
+        <input type="text" id="street" name="supplierStreet" required>
+    </div>
+    <div>
+        <label for="city">Город:</label>
+        <input type="text" id="city" name="supplierCity" required>
+    </div>
+    <div>
+        <label for="state">Штат:</label>
+        <input type="text" id="state" name="supplierState" required>
+    </div>
+    <div>
+        <label for="zip">Почтовый индекс:</label>
+        <input type="text" id="zip" name="supplierZip" required>
+    </div>
+    <button type="submit">Сохранить</button>
+</form>
+</body>
+</html>
